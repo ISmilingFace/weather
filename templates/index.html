@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>天气预报</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/static/weather.css">
+    </head>
+    <body>
+        <form action="#" method="#">
+            <input name="city" type="text" placeholder="请输入要查询的城市名称">
+            <button type="submit">查询</button>
+        </form>
+        <header>{{ currentCity }}</header>
+        <main>
+            <img class="icon" src="{{ weather_data.0.dayPictureUrl }}">
+            <div class="tempers">{{ weather_data.0.temperature }}</div>
+            <div class="weather">{{ weather_data.0.weather }}</div>
+            <div class="wind">{{ weather_data.0.wind }}</div>
+            <div class="current">{{ weather_data.0.date }}</div>
+        </main>
+        <footer>
+			<section>
+				<div class="week">
+                    <img src="{{ weather_data.1.dayPictureUrl }}">
+				    <div class="temper">{{ weather_data.1.temperature }}</div>
+				    <div class="weather">{{ weather_data.1.weather }}</div>
+				    <div class="wind">{{ weather_data.1.wind }}</div>
+                </div>
+			</section>
+            <section>
+				<div class="week">
+                    <img src="{{ weather_data.2.dayPictureUrl }}">
+				    <div class="temper">{{ weather_data.2.temperature }}</div>
+				    <div class="weather">{{ weather_data.2.weather }}</div>
+				    <div class="wind">{{ weather_data.2.wind }}</div>
+                </div>
+			</section>
+            <section>
+				<div class="week">
+                    <img src="{{ weather_data.3.dayPictureUrl }}">
+				    <div class="temper">{{ weather_data.3.temperature }}</div>
+				    <div class="weather">{{ weather_data.3.weather }}</div>
+				    <div class="wind">{{ weather_data.3.wind }}</div>
+                </div>
+			</section>
+            <div style="clear:left;"></div>
+        </footer>
+    </body>
+</html>
